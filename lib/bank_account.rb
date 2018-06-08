@@ -22,7 +22,6 @@ class BankAccount
     else self.status == "closed" || self.balance == 0
     false
   end
-  end
   # describe '#valid?' do
   #   it "is valid with an open status and a balance greater than 0" do
   #     @broke = BankAccount.new("Kat Dennings")
