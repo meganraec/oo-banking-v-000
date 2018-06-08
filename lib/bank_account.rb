@@ -18,10 +18,6 @@ class BankAccount
 
   def valid?
   end
-
-  def close_account
-    self.status = "closed"
-  end
   # describe '#valid?' do
   #   it "is valid with an open status and a balance greater than 0" do
   #     @broke = BankAccount.new("Kat Dennings")
@@ -33,13 +29,9 @@ class BankAccount
   #     expect(@closed.valid?).to eq(false)
   #   end
   # end
-  #
-  # describe '#close_account' do
-  #   it "can close its account" do
-  #     avi.close_account
-  #     expect(avi.status).to eq("closed")
-  #   end
-  # end
-  # end
+  end
 
+  def close_account
+    self.status = "closed"
+  end
 end
