@@ -17,6 +17,11 @@ class BankAccount
   end
 
   def valid?
+    if self.status == "open" && self.balance > 0
+    true
+    else self.status == "closed" || self.balance == 0
+    false
+  end
   end
   # describe '#valid?' do
   #   it "is valid with an open status and a balance greater than 0" do
