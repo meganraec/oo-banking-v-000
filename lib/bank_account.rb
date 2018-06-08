@@ -6,24 +6,22 @@ class BankAccount
     @name = name
     @balance = 1000
     @status = "open"
-
   end
 
-  #
-  # describe '#deposit' do
-  #   it "can deposit money into its account" do
-  #     expect(avi.balance).to eq(1000)
-  #     avi.deposit(1000)
-  #     expect(avi.balance).to eq(2000)
-  #   end
-  # end
-  #
-  # describe '#display_balance' do
-  #   it "can display its balance" do
-  #     expect(avi.display_balance).to eq("Your balance is $#{avi.balance}.")
-  #   end
-  # end
-  #
+  def deposit(amount)
+    self.balance += amount
+  end
+
+  def display_balance
+    "Your balance is $#{self.balance}."
+  end
+
+  def valid?
+  end
+
+  def close_account
+    self.status = "closed"
+  end
   # describe '#valid?' do
   #   it "is valid with an open status and a balance greater than 0" do
   #     @broke = BankAccount.new("Kat Dennings")
