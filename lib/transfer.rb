@@ -10,6 +10,7 @@ class Transfer
 
   def valid?
     @sender.valid? && @receiver.valid? : true ? false
+    binding.pry
   end
 
   def execute_transaction
